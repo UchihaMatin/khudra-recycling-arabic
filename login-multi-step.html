@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إنشاء حساب | خضرة</title>
+  <meta name="description" content="أنشئ حسابك في خضرة خلال دقيقة: اختر مدينتك وأدخل رقم جوالك ونوع حسابك وابدأ ببيع المواد القابلة للتدوير.">
+  <meta name="theme-color" content="#266769">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_SA">
+  <meta property="og:site_name" content="خضرة">
+  <meta property="og:title" content="إنشاء حساب | خضرة">
+  <meta property="og:description" content="أنشئ حسابك في خضرة خلال دقيقة: اختر مدينتك وأدخل رقم جوالك ونوع حسابك وابدأ ببيع المواد القابلة للتدوير.">
+  <meta property="og:image" content="assets/images/og-cover.jpg">
+  <link rel="icon" href="assets/images/logo/logo-minimal.png" type="image/png">
+  <link rel="stylesheet" href="assets/font/stylesheet.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body id="loginMultiStep">
+    <main id="login-multi-step-parent">
+        <section class="login-section">
+            <div class="login-box">
+                <h2 class="login-header">المملكة العربية السعودية</h2>
+                <h1 class="login-title">اختر مدينتك</h1>
+                <div class="description-box">
+                    <img src="assets/images/icon/tick-header.svg" alt="">
+                    <p class="description-text">اختر مدينتك من القائمة لنعرض لك الأسعار ومواعيد الاستلام المتاحة في منطقتك.</p>
+                </div>
+                <div class="login-form">
+                    <label>مدينتك</label>
+                    <div class="form-group">
+                        <div class="simple-form select-scroll">
+                            <div class="select-box select-with-guide">
+                                <p class="select-guide">اختر مدينتك من القائمة:</p>
+                                <span class="selected-value">مدينتك؟</span>
+                                <button class="select-box-button" type="button" aria-label="فتح قائمة المدن">
+                                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><path d="M1.47 1.64 5 5.16l3.53-3.52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </button>
+                            </div>
+
+                            <ul class="select-option">
+                                <li data-value="riyadh">الرياض</li>
+                                <li data-value="jeddah">جدة</li>
+                                <li data-value="makkah">مكة المكرمة</li>
+                                <li data-value="madinah">المدينة المنورة</li>
+                                <li data-value="dammam">الدمام</li>
+                                <li data-value="khobar">الخبر</li>
+                                <li data-value="dhahran">الظهران</li>
+                                <li data-value="taif">الطائف</li>
+                                <li data-value="tabuk">تبوك</li>
+                                <li data-value="abha">أبها</li>
+                                <li data-value="buraidah">بريدة</li>
+                                <li data-value="hail">حائل</li>
+                                <li data-value="jazan">جازان</li>
+                                <li data-value="najran">نجران</li>
+                                <li data-value="yanbu">ينبع</li>
+                            </ul>
+                        </div>
+
+                        <button id="citySubmitButton" class="submit-button" type="button">
+                            <div class="btn-text">
+                                <img src="assets/images/icon/tick-button.svg" alt=""> تأكيد المدينة </div>
+                            <span class="loading-action"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="login-image fix-size-image">
+                <img src="assets/images/backgrund/art.png" alt="">
+            </div>
+        </section>
+        <section class="login-section">
+            <div class="login-box">
+                <button class="back-button" id="mobileBackBtn" type="button">
+                    <img src="assets/images/icon/back-square.svg" alt=""> رجوع </button>
+                <h2 class="login-header"><a href="index.html" aria-label="خضرة - الصفحة الرئيسية"><img src="assets/images/logo/logo-column.svg" alt="خضرة" class="logo"></a></h2>
+                <h1 class="login-title">رقم جوالك</h1>
+                <div class="description-box">
+                    <img src="assets/images/icon/tick-header.svg" alt="">
+                    <p class="description-text">أدخل رقم جوالك للمتابعة، وسنرسل إليك رمز تحقق لتأكيد هويتك وحماية حسابك.</p>
+                </div>
+                <div class="login-form">
+                    <label for="PhoneNumber">رقم الجوال</label>
+                    <div class="form-group form-big-btn">
+                        <div class="simple-form ">
+                            <input
+                            type="tel"
+                            id="PhoneNumber"
+                            class="input-login"
+                            name="mobile"
+                            placeholder="مثال: 0512345678"
+                            pattern="05[0-9]{8}"
+                            maxlength="10"
+                            inputmode="numeric"
+                            autocomplete="tel"
+                            dir="ltr"
+                            required
+                          >
+                        </div>
+                        <button class="submit-button" id="mobileBtn" type="button">
+                            <div class="btn-text">
+                                <img src="assets/images/icon/arrow-left-stroke.svg" alt=""> إرسال رمز التحقق </div>
+                            <span class="loading-action"></span>
+                        </button>
+                    </div>
+                    <div class="rules-login">
+                        <img src="assets/images/icon/link-tick.svg" alt="">
+                        <p class="rules-text">بالمتابعة فإنك توافق على <a class="rules-link" href="about-us.html#contact">الشروط والأحكام</a> وسياسة الخصوصية.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="login-image">
+                <img src="assets/images/backgrund/art.png" alt="">
+            </div>
+        </section>
+        <section class="login-section">
+            <div class="login-box">
+                <button class="back-button" id="subscriptionBackBtn" type="button">
+                    <img src="assets/images/icon/back-square.svg" alt=""> رجوع </button>
+                <h2 class="login-header"><a href="index.html" aria-label="خضرة - الصفحة الرئيسية"><img src="assets/images/logo/logo-column.svg" alt="خضرة" class="logo"></a></h2>
+                <h2 class="login-title">نوع الحساب</h2>
+                <div class="description-box">
+                    <img src="assets/images/icon/tick-header.svg" alt="">
+                    <p class="description-text">اختر نوع الحساب المناسب لك. لكل نوع مزايا وأدوات مختلفة، ويمكنك تغييره لاحقًا من إعدادات حسابك.</p>
+                </div>
+                <div id="subscription-box">
+                    <div id="subscriptionUserHome" class="subscription-user active" role="button" tabindex="0">
+                        <div class="subscription-background"></div>
+                        <div class="subscription-icons">
+                        </div>
+                        <h3 class="subscription-header">حساب منزلي مميز</h3>
+                        <ul class="subscription-list">
+                            <li>
+                                <img src="assets/images/icon/tick-text.svg" alt=""> كل ما تحتاجه الأسرة لبيع المواد المستعملة. </li>
+                            <li>
+                                <img src="assets/images/icon/tick-text.svg" alt=""> مناسب للاستخدام اليومي. </li>
+                            <li>
+                                <img src="assets/images/icon/tick-text.svg" alt=""> واجهة سهلة وواضحة. </li>
+                            <li>
+                                <img src="assets/images/icon/tick-text.svg" alt=""> إدارة آمنة لبياناتك الشخصية. </li>
+                        </ul>
+                    </div>
+                    <div id="subscriptionUserGuild" class="subscription-user" role="button" tabindex="0">
+                        <div class="subscription-background"></div>
+                        <div class="subscription-icons">
+                        </div>
+                        <h3 class="subscription-header">حساب تجاري احترافي</h3>
+                        <ul class="subscription-list">
+                            <li>
+                                <img src="assets/images/icon/tick-text.svg" alt=""> أدوات متقدمة للمحلات والمنشآت. </li>
+                            <li>
+                                <img src="assets/images/icon/tick-text.svg" alt=""> إدارة عدة فروع ومستخدمين. </li>
+                            <li>
+                                <img src="assets/images/icon/tick-text.svg" alt=""> تقارير احترافية دورية. </li>
+                            <li>
+                                <img src="assets/images/icon/tick-text.svg" alt=""> مناسب لنمو أعمالك وتوسعها. </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="submit-button solo-button" id="subscriptionBtn" type="button">
+                    <div class="btn-text">
+                        <img src="assets/images/icon/tick-button.svg" alt=""> اختيار نوع الحساب </div>
+                    <span class="loading-action"></span>
+                </button>
+            </div>
+            <div class="login-image">
+                <img src="assets/images/backgrund/art.png" alt="">
+            </div>
+        </section>
+        <section class="login-section">
+            <div id="subscriptionUserSection" class="login-box">
+                <button class="back-button" id="subscriptionUserBackBtn" type="button">
+                    <img src="assets/images/icon/back-square.svg" alt=""> رجوع </button>
+                <h2 class="login-header"><a href="index.html" aria-label="خضرة - الصفحة الرئيسية"><img src="assets/images/logo/logo-column.svg" alt="خضرة" class="logo"></a></h2>
+                <h2 class="login-title">بيانات الحساب</h2>
+                <div class="description-box">
+                    <img src="assets/images/icon/tick-header.svg" alt="">
+                    <p class="description-text">أكمل الحقول التالية لإتمام تسجيلك والاستفادة من خدمات خضرة. بياناتك محفوظة ومحمية بالكامل.</p>
+                </div>
+                <div class="user-form">
+                    <div class="form-field">
+                        <label>الاسم الأول</label>
+                        <input class="input-login" type="text" name="firstName" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-field">
+                        <label>اسم العائلة</label>
+                        <input class="input-login" type="text" name="lastName" autocomplete="family-name" required>
+                    </div>
+                    <div class="form-field">
+                        <label>رقم الهوية الوطنية / الإقامة</label>
+                        <input class="input-login input-number" type="text" name="nationalId" maxlength="10" inputmode="numeric" pattern="[12][0-9]{9}" dir="ltr" required>
+                    </div>
+                    <div class="form-field date-picker-container">
+                        <label>تاريخ الميلاد</label>
+                        <input type="text" class="birthdate-input birthdate-box input-login input-number" placeholder="اختر تاريخ ميلادك" readonly>
+                        <div class="date-picker">
+                            <div class="picker-header">
+                                <button class="picker-header-btn cancel-btn" type="button">إلغاء</button>
+                                <button class="picker-header-btn confirm-btn" type="button">تأكيد</button>
+                            </div>
+                            <div class="picker-columns">
+                                <div class="picker-column year-column">
+
+                                </div>
+                                <div class="picker-column month-column">
+
+                                </div>
+                                <div class="picker-column day-column">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>رمز الدعوة <span>(اختياري)</span></label>
+                        <input class="input-login input-number" type="text" name="referralCode" dir="ltr">
+                    </div>
+                    <div class="form-field">
+                        <label>عدد أفراد الأسرة <span>(اختياري)</span></label>
+                        <input class="input-login input-number" type="number" name="familyCount" min="1" max="30">
+                    </div>
+                    <div class="form-field guild-field">
+                        <label>نوع النشاط التجاري</label>
+                        <div class="simple-form select-scroll max-box">
+                            <div class="select-box">
+                                <span class="selected-value" data-value="other">أخرى</span>
+                                <button class="select-box-button" type="button" aria-label="فتح قائمة الأنشطة">
+                                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><path d="M1.47 1.64 5 5.16l3.53-3.52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </button>
+                            </div>
+
+                            <ul class="select-option">
+                                <li data-value="scrap">محل خردة</li>
+                                <li data-value="workshop">ورشة صيانة</li>
+                                <li data-value="restaurant">مطعم أو مقهى</li>
+                                <li data-value="office">مكتب أو شركة</li>
+                                <li data-value="factory">مصنع</li>
+                                <li data-value="other">أخرى</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-field guild-field">
+                        <label>اسم المحل أو المنشأة</label>
+                        <input class="input-login" type="text" name="storeName" autocomplete="organization">
+                    </div>
+                </div>
+                <button class="submit-button solo-button" id="subscriptionUserBtn" type="button">
+                    <div class="btn-text">
+                        <img src="assets/images/icon/tick-button.svg" alt=""> تأكيد البيانات </div>
+                    <span class="loading-action"></span>
+                </button>
+            </div>
+            <div class="login-image">
+                <img src="assets/images/backgrund/art.png" alt="">
+            </div>
+        </section>
+        <section class="login-section">
+            <div class="login-box">
+                <button class="back-button" id="verificationBackBtn" type="button">
+                    <img src="assets/images/icon/back-square.svg" alt=""> رجوع </button>
+                <h2 class="login-header"><a href="index.html" aria-label="خضرة - الصفحة الرئيسية"><img src="assets/images/logo/logo-column.svg" alt="خضرة" class="logo"></a></h2>
+                <h2 class="login-title">تأكيد رقم الجوال</h2>
+                <div class="description-box">
+                    <img src="assets/images/icon/tick-header.svg" alt="">
+                    <p class="description-text">أرسلنا رمز التحقق إلى جوالك. أدخله في الخانات التالية لتأكيد هويتك والوصول إلى حسابك. (في هذا العرض التجريبي يمكنك إدخال أي 6 أرقام)</p>
+                </div>
+                <div class="login-form">
+                    <label>رمز التحقق المكوّن من 6 أرقام</label>
+                    <div class="form-group form-big-btn">
+                        <div class="simple-form code-form">
+                            <div class="code-inputs input-login" dir="ltr">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input filled" aria-label="الرقم 1">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input" aria-label="الرقم 2">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input" aria-label="الرقم 3">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input" aria-label="الرقم 4">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input" aria-label="الرقم 5">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input" aria-label="الرقم 6">
+                            </div>
+                        </div>
+                        <button class="submit-button" id="verificationBtn" type="button">
+                            <div class="btn-text">
+                                <img src="assets/images/icon/tick-button.svg" alt=""> تأكيد الهوية </div>
+                            <span class="loading-action"></span>
+                        </button>
+                    </div>
+                    <div class="limit-time">
+                        <img src="assets/images/icon/refresh.svg" alt="">
+                        <p>
+                            يمكنك طلب رمز جديد بعد <span class="timer">00:00</span></p>
+                        <button class="limit-reset" type="button">إعادة الإرسال</button>
+                    </div>
+                </div>
+            </div>
+            <div class="login-image">
+                <img src="assets/images/backgrund/art.png" alt="">
+            </div>
+        </section>
+        <section id="progressBarSection" aria-label="مراحل التسجيل">
+            <div id="progressBarBox">
+                <div class="progress-bar" id="progressBar0">
+                    <span class="progress-bar-number">01</span>
+                    <p class="progress-bar-text">اختيار المدينة</p>
+                    <div class="progress-line">
+                        <div class="confirm-progress-line"></div>
+                    </div>
+                </div>
+                <div class="progress-bar" id="progressBar1">
+                    <span class="progress-bar-number">02</span>
+                    <p class="progress-bar-text">رقم الجوال</p>
+                    <div class="progress-line">
+                        <div class="confirm-progress-line"></div>
+                    </div>
+                </div>
+                <div class="progress-bar" id="progressBar2">
+                    <span class="progress-bar-number">03</span>
+                    <p class="progress-bar-text">نوع الحساب</p>
+                    <div class="progress-line">
+                        <div class="confirm-progress-line"></div>
+                    </div>
+                </div>
+                <div class="progress-bar" id="progressBar3">
+                    <span class="progress-bar-number">04</span>
+                    <p class="progress-bar-text">بيانات الحساب</p>
+                    <div class="progress-line">
+                        <div class="confirm-progress-line"></div>
+                    </div>
+                </div>
+                <div class="progress-bar" id="progressBar4">
+                    <span class="progress-bar-number">05</span>
+                    <p class="progress-bar-text">تأكيد الرقم</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+    version="1.1">
+    <defs>
+      <filter id="round">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+    <script src="assets/js/DatePicker/DatePicker.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

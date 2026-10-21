@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل مركز تدوير | خضرة</title>
+  <meta name="description" content="سجّل مركز التدوير أو محل الخردة الخاص بك في خضرة لتستقبل طلبات الاستلام من الأحياء القريبة.">
+  <meta name="theme-color" content="#266769">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_SA">
+  <meta property="og:site_name" content="خضرة">
+  <meta property="og:title" content="تسجيل مركز تدوير | خضرة">
+  <meta property="og:description" content="سجّل مركز التدوير أو محل الخردة الخاص بك في خضرة لتستقبل طلبات الاستلام من الأحياء القريبة.">
+  <meta property="og:image" content="assets/images/og-cover.jpg">
+  <link rel="icon" href="assets/images/logo/logo-minimal.png" type="image/png">
+  <link rel="stylesheet" href="assets/font/stylesheet.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body id="registerRecyclable">
+    <main id="login-multi-step-parent">
+        <section class="login-section">
+            <div class="login-box">
+                <h2 class="login-header"><a href="index.html" aria-label="خضرة - الصفحة الرئيسية"><img src="assets/images/logo/logo-column.svg" alt="خضرة" class="logo"></a></h2>
+                <h1 class="login-title">بيانات مركز التدوير</h1>
+                <div class="description-box">
+                    <img src="assets/images/icon/tick-header.svg" alt="">
+                    <p class="description-text">أكمل بيانات منشأتك لتسجيلها كمركز تدوير معتمد في خضرة، وستتمكن بعد المراجعة من استقبال طلبات الاستلام القريبة منك.</p>
+                </div>
+                <div class="user-form">
+                    <div class="form-field">
+                        <label>الاسم الأول</label>
+                        <input class="input-login" type="text" name="firstName" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-field">
+                        <label>اسم العائلة</label>
+                        <input class="input-login" type="text" name="lastName" autocomplete="family-name" required>
+                    </div>
+                    <div class="form-field">
+                        <label>رقم الهوية الوطنية / الإقامة</label>
+                        <input class="input-login input-number" type="text" name="nationalId" maxlength="10" inputmode="numeric" pattern="[12][0-9]{9}" dir="ltr" required>
+                    </div>
+                    <div class="form-field date-picker-container">
+                        <label>تاريخ الميلاد</label>
+                        <input type="text" class="birthdate-input birthdate-box input-login input-number" placeholder="اختر تاريخ ميلادك" readonly>
+                        <div class="date-picker">
+                            <div class="picker-header">
+                                <button class="picker-header-btn cancel-btn" type="button">إلغاء</button>
+                                <button class="picker-header-btn confirm-btn" type="button">تأكيد</button>
+                            </div>
+                            <div class="picker-columns">
+                                <div class="picker-column year-column">
+
+                                </div>
+                                <div class="picker-column month-column">
+
+                                </div>
+                                <div class="picker-column day-column">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>رقم الجوال</label>
+                        <input class="input-login input-number" type="tel" name="mobile" placeholder="05XXXXXXXX" maxlength="10" inputmode="numeric" pattern="05[0-9]{8}" dir="ltr" required>
+                    </div>
+                    <div class="form-field">
+                        <label>الرمز البريدي</label>
+                        <input class="input-login input-number" type="text" name="postalCode" maxlength="5" inputmode="numeric" pattern="[0-9]{5}" dir="ltr">
+                    </div>
+                    <div class="form-field">
+                        <label>رقم السجل التجاري</label>
+                        <input class="input-login input-number" type="text" name="crNumber" maxlength="10" inputmode="numeric" dir="ltr">
+                    </div>
+                    <div class="form-field">
+                        <label>رمز الدعوة <span>(اختياري)</span></label>
+                        <input class="input-login input-number" type="text" name="referralCode" dir="ltr">
+                    </div>
+                    <div class="form-field">
+                        <label>المدينة</label>
+                        <div class="simple-form select-scroll max-box">
+                            <div class="select-box">
+                                <span class="selected-value">المدينة؟</span>
+                                <button class="select-box-button" type="button" aria-label="فتح قائمة المدن">
+                                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><path d="M1.47 1.64 5 5.16l3.53-3.52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </button>
+                            </div>
+
+                            <ul class="select-option">
+                                <li data-value="riyadh">الرياض</li>
+                                <li data-value="jeddah">جدة</li>
+                                <li data-value="makkah">مكة المكرمة</li>
+                                <li data-value="madinah">المدينة المنورة</li>
+                                <li data-value="dammam">الدمام</li>
+                                <li data-value="khobar">الخبر</li>
+                                <li data-value="dhahran">الظهران</li>
+                                <li data-value="taif">الطائف</li>
+                                <li data-value="tabuk">تبوك</li>
+                                <li data-value="abha">أبها</li>
+                                <li data-value="buraidah">بريدة</li>
+                                <li data-value="hail">حائل</li>
+                                <li data-value="jazan">جازان</li>
+                                <li data-value="najran">نجران</li>
+                                <li data-value="yanbu">ينبع</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>اسم المركز أو المنشأة</label>
+                        <input class="input-login" type="text" name="storeName" autocomplete="organization" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="centerAddress">العنوان التفصيلي</label>
+                        <textarea name="address" id="centerAddress" placeholder="الحي، الشارع، رقم المبنى"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label>الموقع على الخريطة</label>
+                        <div id="map-box">
+                            <div id="map">
+                                <iframe title="خريطة موقع المركز" src="https://www.openstreetmap.org/export/embed.html?bbox=46.58%2C24.70%2C46.78%2C24.82&amp;layer=mapnik&amp;marker=24.7600%2C46.6800" loading="lazy" referrerpolicy="no-referrer"></iframe>
+                            </div>
+                            <button id="mapBtn" type="button">تحديد الموقع</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="submit-button solo-button" id="subscriptionUserBtn" type="button">
+                    <div class="btn-text">
+                        <img src="assets/images/icon/tick-button.svg" alt=""> إرسال الطلب </div>
+                    <span class="loading-action"></span>
+                </button>
+            </div>
+            <div class="login-image">
+                <img src="assets/images/backgrund/art.png" alt="">
+            </div>
+        </section>
+        <section class="login-section">
+            <div class="login-box">
+                <button class="back-button" id="verificationBackBtn" type="button">
+                    <img src="assets/images/icon/back-square.svg" alt=""> رجوع </button>
+                <h2 class="login-header"><a href="index.html" aria-label="خضرة - الصفحة الرئيسية"><img src="assets/images/logo/logo-column.svg" alt="خضرة" class="logo"></a></h2>
+                <h2 class="login-title">تأكيد رقم الجوال</h2>
+                <div class="description-box">
+                    <img src="assets/images/icon/tick-header.svg" alt="">
+                    <p class="description-text">أرسلنا رمز التحقق إلى جوالك. أدخله في الخانات التالية لتأكيد هويتك والوصول إلى حسابك. (في هذا العرض التجريبي يمكنك إدخال أي 6 أرقام)</p>
+                </div>
+                <div class="login-form">
+                    <label>رمز التحقق المكوّن من 6 أرقام</label>
+                    <div class="form-group form-big-btn">
+                        <div class="simple-form code-form">
+                            <div class="code-inputs input-login" dir="ltr">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input filled" aria-label="الرقم 1">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input" aria-label="الرقم 2">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input" aria-label="الرقم 3">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input" aria-label="الرقم 4">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input" aria-label="الرقم 5">
+                                <input type="text" inputmode="numeric" maxlength="1" class="code-input" aria-label="الرقم 6">
+                            </div>
+                        </div>
+                        <button class="submit-button" id="verificationBtn" type="button">
+                            <div class="btn-text">
+                                <img src="assets/images/icon/tick-button.svg" alt=""> تأكيد الهوية </div>
+                            <span class="loading-action"></span>
+                        </button>
+                    </div>
+                    <div class="limit-time">
+                        <img src="assets/images/icon/refresh.svg" alt="">
+                        <p>
+                            يمكنك طلب رمز جديد بعد <span class="timer">00:00</span></p>
+                        <button class="limit-reset" type="button">إعادة الإرسال</button>
+                    </div>
+                </div>
+            </div>
+            <div class="login-image">
+                <img src="assets/images/backgrund/art.png" alt="">
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/DatePicker/DatePicker.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

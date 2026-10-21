@@ -1,0 +1,14 @@
+{
+  "name": "khudra-recycling-arabic",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Khudra — Arabic (RTL) front-end for a recyclables marketplace: landing pages, sign-up flows, user web app and recycling-center dashboard.",
+  "scripts": {
+    "build:css": "sass assets/scss/style.scss assets/css/style.min.css --style=compressed --no-source-map",
+    "watch:css": "sass --watch assets/scss/style.scss assets/css/style.min.css --style=compressed --no-source-map",
+    "dev": "npx --yes serve ."
+  },
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}

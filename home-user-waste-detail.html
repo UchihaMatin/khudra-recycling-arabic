@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل المادة | خضرة</title>
+  <meta name="description" content="اعرف سعر المادة اليوم واحسب قيمة الكمية التي لديك بالريال السعودي قبل طلب الاستلام.">
+  <meta name="theme-color" content="#266769">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_SA">
+  <meta property="og:site_name" content="خضرة">
+  <meta property="og:title" content="تفاصيل المادة | خضرة">
+  <meta property="og:description" content="اعرف سعر المادة اليوم واحسب قيمة الكمية التي لديك بالريال السعودي قبل طلب الاستلام.">
+  <meta property="og:image" content="assets/images/og-cover.jpg">
+  <link rel="icon" href="assets/images/logo/logo-minimal.png" type="image/png">
+  <link rel="stylesheet" href="assets/font/stylesheet.css">
+  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+  <body id="homeUserWasteDetail">
+    <div id="webApp">
+      <header class="header">
+        <div class="hamburger-menu-box">
+      <div class="hamburger-menu" role="button" tabindex="0" aria-label="فتح القائمة">
+        <svg class="ham" viewBox="0 0 100 100">
+          <path class="line top"
+            d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+          <path class="line middle" d="m 30,50 h 40" />
+          <path class="line bottom"
+            d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+        </svg>
+      </div>
+    </div>
+        <div class="header-base">
+          <a href="home-user-profile.html" class="header-user">
+            <img src="assets/images/icon/profile-circle-white.svg" alt="" />
+            <span class="header-username">خالد العتيبي</span>
+          </a>
+          <nav class="header-nav" aria-label="قائمة الحساب">
+            <div class="header-nav-background"></div>
+            <ul class="nav-list">
+          <li>
+            <a href="home-user-calculator.html">الرئيسية</a>
+          </li>
+          <li class="active">
+            <a href="home-user-wastes.html" aria-current="page">أسعار المواد</a>
+          </li>
+          <li>
+            <a href="home-user-purchase-request.html">طلبات الاستلام</a>
+          </li>
+          <li>
+            <a href="home-user-wallet.html">المحفظة</a>
+          </li>
+          <li>
+            <a href="articles.html">المقالات</a>
+          </li>
+          <li>
+            <a href="index.html">تسجيل الخروج</a>
+          </li>
+            </ul>
+          </nav>
+          <a href="home-user-wallet.html" class="header-wallet">
+            <span class="header-wallet-title">الرصيد: </span>
+            <span class="header-wallet-number">1,250 ر.س</span>
+            <img src="assets/images/icon/empty-wallet.svg" alt="" />
+          </a>
+        </div>
+      </header>
+
+      <img
+        src="assets/images/web-app/baner-waste.svg"
+        alt=""
+        class="calculator-baner"
+      />
+      <div class="current-price-section">
+        <p class="price-title">سعر شراء <span id="materialName">النحاس</span> الآن:</p>
+        <span class="price-value"><span id="materialPrice">28.00</span> ر.س / كجم</span>
+      </div>
+
+      <div class="quantity-section">
+        <h1 class="quantity-title h4">
+          <img src="assets/images/icon/math.svg" alt="" /> احسب قيمة موادك </h1>
+        <div class="quantity-controls">
+          <span id="quantityMin">1</span>
+          <span id="quantityMax">+100</span>
+        </div>
+        <input
+          type="range"
+          name="quantity"
+          min="0"
+          max="100"
+          id="quantityRange"
+          value="0"
+          aria-label="الوزن بالكيلوغرام"
+        />
+        <div class="quantity-details">
+          <div>
+            <label for="weightInput">الوزن <span>كجم</span></label>
+            <input type="number" id="weightInput" placeholder="كجم" min="0" inputmode="decimal" />
+          </div>
+          <div>
+            <label for="priceInput">القيمة <span>ر.س</span></label>
+            <input type="text" id="priceInput" value="0.00" readonly />
+          </div>
+        </div>
+      </div>
+      <a href="home-user-location.html" class="add-funds-link"> اطلب الاستلام الآن <img src="assets/images/icon/empty-wallet-add.svg" alt="" class="add-funds-icon" />
+      </a>
+      <div class="calculator-text">
+        <h3 class="title" id="materialInfoTitle">ما الذي يُحتسب نحاسًا؟</h3>
+        <p class="text" id="materialInfo">يشمل النحاس الأسلاك الكهربائية بعد إزالة العازل، وأنابيب السباكة والتكييف، وملفات المحركات والمحولات. افصل النحاس عن البلاستيك والحديد قدر الإمكان، فالنحاس النظيف اللامع يُشترى بأعلى سعر، بينما يُحتسب النحاس المختلط بمواد أخرى بسعر أقل.</p>
+      </div>
+      <div class="app-menu">
+        <nav class="app-menu-box" aria-label="قائمة التطبيق">
+          <a href="home-user-profile.html" class="app-menu-item">
+            <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.1605 11.37c-.1-.01-.22-.01-.33 0-2.37995-.08-4.26995-2.03-4.26995-4.43 0-2.45 1.98-4.44 4.43995-4.44 2.45 0 4.44 1.99 4.44 4.44-.01 2.4-1.9 4.35-4.28 4.43ZM7.1607 15.06c-2.42 1.62-2.42 4.26 0 5.87 2.75 1.84 7.26 1.84 10.01 0 2.42-1.62 2.42-4.26 0-5.87-2.74-1.83-7.25-1.83-10.01 0Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg> حسابي </a>
+          <a href="home-user-wallet.html" class="app-menu-item">
+            <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.04 14.05c-.42.41-.66 1-.6 1.63.09 1.08 1.08 1.87 2.16 1.87h1.9v1.19c0 2.07-1.69 3.76-3.76 3.76H6.26c-2.07 0-3.76-1.69-3.76-3.76v-6.73c0-2.06999 1.69-3.76 3.76-3.76h11.48c2.07 0 3.76 1.69001 3.76 3.76v1.44h-2.02c-.56 0-1.07.22-1.44.6Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2.5 12.9101v-4.57c0-1.19.73-2.25004 1.84-2.67004l7.94-3c1.24-.47 2.57.45003 2.57 1.78003v3.79999M22.5588 14.4702v2.06c0 .55-.44 1-1 1.02h-1.96c-1.08 0-2.07-.79-2.16-1.87-.06-.63.18-1.22.6-1.63.37-.38.88-.6 1.44-.6h2.08c.56.02 1 .47 1 1.02ZM7 12.5h7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg> المحفظة </a>
+          <a href="home-user-calculator.html" class="app-menu-item">
+            <svg width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="m9.52 3.33992-5.39 4.2c-.9.7-1.63 2.19-1.63 3.31998v7.41c0 2.32 1.89 4.22 4.21 4.22h11.58c2.32 0 4.21-1.9 4.21-4.21v-7.28c0-1.20998-.81-2.75998-1.8-3.44998l-6.18-4.33c-1.4-.98-3.65-.93-5 .12ZM12.5 18.49v-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg> الرئيسية </a>
+          <a href="home-user-wastes.html" class="app-menu-item active" aria-current="page">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.19 2.5H7.81C4.17 2.5 2 4.67 2 8.31V16.68C2 20.33 4.17 22.5 7.81 22.5H16.18C19.82 22.5 21.99 20.33 21.99 16.69V8.31C22 4.67 19.83 2.5 16.19 2.5ZM11.03 18.16C11.32 18.45 11.32 18.93 11.03 19.22C10.88 19.37 10.69 19.44 10.5 19.44C10.31 19.44 10.12 19.37 9.97 19.22L8.25 17.5L6.53 19.22C6.38 19.36 6.19 19.44 6 19.44C5.81 19.44 5.62 19.37 5.47 19.22C5.18 18.93 5.18 18.45 5.47 18.16L7.19 16.44L5.47 14.72C5.18 14.43 5.18 13.95 5.47 13.66C5.76 13.37 6.24 13.37 6.53 13.66L8.25 15.38L9.97 13.66C10.26 13.37 10.74 13.37 11.03 13.66C11.32 13.95 11.32 14.43 11.03 14.72L9.31 16.44L11.03 18.16ZM10.5 9.31H6C5.59 9.31 5.25 8.97 5.25 8.56C5.25 8.15 5.59 7.81 6 7.81H10.5C10.91 7.81 11.25 8.15 11.25 8.56C11.25 8.97 10.91 9.31 10.5 9.31ZM18 19.06H13.5C13.09 19.06 12.75 18.72 12.75 18.31C12.75 17.9 13.09 17.56 13.5 17.56H18C18.41 17.56 18.75 17.9 18.75 18.31C18.75 18.72 18.41 19.06 18 19.06ZM18 15.31H13.5C13.09 15.31 12.75 14.97 12.75 14.56C12.75 14.15 13.09 13.81 13.5 13.81H18C18.41 13.81 18.75 14.15 18.75 14.56C18.75 14.97 18.41 15.31 18 15.31ZM18 9.31H16.52V10.81C16.52 11.22 16.18 11.56 15.77 11.56C15.36 11.56 15.02 11.22 15.02 10.81V9.31H13.5C13.09 9.31 12.75 8.97 12.75 8.56C12.75 8.15 13.09 7.81 13.5 7.81H15.02V6.31C15.02 5.9 15.36 5.56 15.77 5.56C16.18 5.56 16.52 5.9 16.52 6.31V7.81H18C18.41 7.81 18.75 8.15 18.75 8.56C18.75 8.97 18.41 9.31 18 9.31Z" />
+            </svg> الأسعار </a>
+          <a href="home-user-purchase-request.html" class="app-menu-item">
+            <svg width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.5 2.5v3M16.5 2.5v3M4 9.59009h17M21.5 9v8.5c0 3-1.5 5-5 5h-8c-3.5 0-5-2-5-5V9c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5Z" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12.4945 14.2h.009M8.79529 14.2h.00898M8.79529 17.2h.00898" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg> طلباتي </a>
+        </nav>
+      </div>
+    </div>
+
+    <button id="scrollBtn" class="hidden d-none" aria-label="العودة إلى الأعلى">
+    <div>
+      <img src="assets/images/icon/arow-top.svg" alt="">
+    </div>
+  </button>
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+    version="1.1">
+    <defs>
+      <filter id="round">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+    <script src="assets/js/bootstarp/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة تحكم مركز التدوير | خضرة</title>
+  <meta name="description" content="لوحة تحكم مراكز التدوير في خضرة: إدارة طلبات الاستلام والمندوبين والمخزون وأسعار الشراء في مكان واحد.">
+  <meta name="theme-color" content="#266769">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_SA">
+  <meta property="og:site_name" content="خضرة">
+  <meta property="og:title" content="لوحة تحكم مركز التدوير | خضرة">
+  <meta property="og:description" content="لوحة تحكم مراكز التدوير في خضرة: إدارة طلبات الاستلام والمندوبين والمخزون وأسعار الشراء في مكان واحد.">
+  <meta property="og:image" content="assets/images/og-cover.jpg">
+  <link rel="icon" href="assets/images/logo/logo-minimal.png" type="image/png">
+  <link rel="stylesheet" href="assets/font/stylesheet.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body id="recyclingCenterDashboard">
+  <div class="dash">
+    <aside class="dash-aside" id="dashAside" aria-label="قائمة لوحة التحكم">
+      <a class="dash-logo" href="index.html" aria-label="خضرة - الصفحة الرئيسية">
+        <img src="assets/images/logo/logo-row.svg" alt="خضرة">
+      </a>
+      <nav class="dash-nav">
+        <a href="#overview" class="active"><img src="assets/images/icon/chart-square.svg" alt=""> نظرة عامة</a>
+        <a href="#requests"><img src="assets/images/icon/truck-time.svg" alt=""> طلبات الاستلام <span class="dash-badge" id="newCount">3</span></a>
+        <a href="#inventory"><img src="assets/images/icon/3d-square.svg" alt=""> المخزون</a>
+        <a href="#drivers"><img src="assets/images/icon/user.svg" alt=""> المندوبون</a>
+        <a href="#prices"><img src="assets/images/icon/card.svg" alt=""> أسعار الشراء</a>
+      </nav>
+      <div class="dash-tip">
+        <p class="dash-tip-title">نصيحة اليوم</p>
+        <p>حدّث أسعار الشراء صباح كل يوم، فالأسعار الدقيقة ترفع نسبة قبول العملاء لطلبات الاستلام.</p>
+      </div>
+      <a href="index.html" class="dash-logout"><img src="assets/images/icon/login.svg" alt=""> تسجيل الخروج</a>
+    </aside>
+    <div class="dash-overlay" id="dashOverlay"></div>
+
+    <main class="dash-main">
+      <header class="dash-top">
+        <button class="dash-menu-btn" id="dashMenuBtn" type="button" aria-label="فتح القائمة" aria-controls="dashAside" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="dash-title">
+          <p class="dash-hello">مرحبًا بك من جديد</p>
+          <h1>مركز الملقا للتدوير</h1>
+        </div>
+        <label class="dash-search">
+          <img src="assets/images/icon/search.svg" alt="">
+          <input type="search" id="dashSearch" placeholder="ابحث برقم الطلب أو اسم العميل أو الحي" aria-label="البحث في الطلبات">
+        </label>
+        <p class="dash-date"><img src="assets/images/icon/calendar.svg" alt=""> <span id="dashDate">الأربعاء 21 أكتوبر 2026</span></p>
+      </header>
+
+      <section id="overview" class="dash-stats" aria-label="مؤشرات اليوم">
+        <div class="dash-stat">
+          <span class="dash-stat-icon"><img src="assets/images/icon/truck-time.svg" alt=""></span>
+          <p class="dash-stat-label">طلبات اليوم</p>
+          <p class="dash-stat-value">18</p>
+          <p class="dash-stat-trend up">+12% عن الأسبوع الماضي</p>
+        </div>
+        <div class="dash-stat">
+          <span class="dash-stat-icon"><img src="assets/images/icon/3d-square.svg" alt=""></span>
+          <p class="dash-stat-label">المستلم هذا الشهر</p>
+          <p class="dash-stat-value">4.2 <small>طن</small></p>
+          <p class="dash-stat-trend up">+8% عن الشهر الماضي</p>
+        </div>
+        <div class="dash-stat">
+          <span class="dash-stat-icon"><img src="assets/images/icon/card-send.svg" alt=""></span>
+          <p class="dash-stat-label">المدفوع للعملاء</p>
+          <p class="dash-stat-value">12,480 <small>ر.س</small></p>
+          <p class="dash-stat-trend">هذا الشهر</p>
+        </div>
+        <div class="dash-stat">
+          <span class="dash-stat-icon"><img src="assets/images/icon/shield-tick.svg" alt=""></span>
+          <p class="dash-stat-label">تقييم العملاء</p>
+          <p class="dash-stat-value">4.8 <small>من 5</small></p>
+          <p class="dash-stat-trend">من 326 تقييمًا</p>
+        </div>
+      </section>
+
+      <div class="dash-grid">
+        <section id="requests" class="dash-card dash-requests">
+          <div class="dash-card-head">
+            <h2>طلبات الاستلام</h2>
+            <div class="dash-tabs" role="tablist" aria-label="تصفية الطلبات">
+              <button type="button" class="active" data-filter="all" role="tab" aria-selected="true">الكل</button>
+              <button type="button" data-filter="new" role="tab" aria-selected="false">جديدة</button>
+              <button type="button" data-filter="progress" role="tab" aria-selected="false">قيد التنفيذ</button>
+              <button type="button" data-filter="done" role="tab" aria-selected="false">مكتملة</button>
+            </div>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th scope="col">رقم الطلب</th>
+                  <th scope="col">العميل</th>
+                  <th scope="col">الحي</th>
+                  <th scope="col">المواد</th>
+                  <th scope="col">الوزن التقديري</th>
+                  <th scope="col">الموعد</th>
+                  <th scope="col">الحالة</th>
+                  <th scope="col"><span class="visually-hidden">إجراء</span></th>
+                </tr>
+              </thead>
+              <tbody id="requestsBody">
+                <tr data-status="new">
+                  <td dir="ltr">#KH-2481</td>
+                  <td>خالد العتيبي</td>
+                  <td>الملقا</td>
+                  <td>كرتون، بلاستيك</td>
+                  <td>35 كجم</td>
+                  <td>اليوم 9:00 - 13:00</td>
+                  <td><span class="dash-status new">جديد</span></td>
+                  <td><button type="button" class="dash-action" data-next="progress">قبول</button></td>
+                </tr>
+                <tr data-status="new">
+                  <td dir="ltr">#KH-2480</td>
+                  <td>سارة القحطاني</td>
+                  <td>النرجس</td>
+                  <td>علب ألمنيوم</td>
+                  <td>12 كجم</td>
+                  <td>اليوم 16:00 - 20:00</td>
+                  <td><span class="dash-status new">جديد</span></td>
+                  <td><button type="button" class="dash-action" data-next="progress">قبول</button></td>
+                </tr>
+                <tr data-status="new">
+                  <td dir="ltr">#KH-2478</td>
+                  <td>مطعم الديرة</td>
+                  <td>العليا</td>
+                  <td>كرتون، قوارير PET</td>
+                  <td>80 كجم</td>
+                  <td>غدًا 8:00 - 11:00</td>
+                  <td><span class="dash-status new">جديد</span></td>
+                  <td><button type="button" class="dash-action" data-next="progress">قبول</button></td>
+                </tr>
+                <tr data-status="progress">
+                  <td dir="ltr">#KH-2475</td>
+                  <td>فيصل الدوسري</td>
+                  <td>الياسمين</td>
+                  <td>حديد، نحاس</td>
+                  <td>140 كجم</td>
+                  <td>اليوم 10:00 - 14:00</td>
+                  <td><span class="dash-status progress">في الطريق</span></td>
+                  <td><button type="button" class="dash-action" data-next="done">تأكيد الاستلام</button></td>
+                </tr>
+                <tr data-status="progress">
+                  <td dir="ltr">#KH-2471</td>
+                  <td>نورة الشهري</td>
+                  <td>الصحافة</td>
+                  <td>ورق مكتبي</td>
+                  <td>22 كجم</td>
+                  <td>اليوم 12:00 - 16:00</td>
+                  <td><span class="dash-status progress">في الطريق</span></td>
+                  <td><button type="button" class="dash-action" data-next="done">تأكيد الاستلام</button></td>
+                </tr>
+                <tr data-status="done">
+                  <td dir="ltr">#KH-2466</td>
+                  <td>عبدالله المطيري</td>
+                  <td>حطين</td>
+                  <td>مخلوط جاف</td>
+                  <td>48 كجم</td>
+                  <td>أمس 9:00 - 13:00</td>
+                  <td><span class="dash-status done">مكتمل</span></td>
+                  <td><span class="dash-paid">16.80 ر.س</span></td>
+                </tr>
+                <tr data-status="done">
+                  <td dir="ltr">#KH-2462</td>
+                  <td>ورشة النخبة</td>
+                  <td>السلي</td>
+                  <td>حديد وزهر</td>
+                  <td>310 كجم</td>
+                  <td>أمس 14:00 - 18:00</td>
+                  <td><span class="dash-status done">مكتمل</span></td>
+                  <td><span class="dash-paid">279.00 ر.س</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="dash-empty d-none" id="requestsEmpty">لا توجد طلبات مطابقة.</p>
+          </div>
+        </section>
+
+        <section class="dash-card dash-chart" aria-labelledby="weekTitle">
+          <div class="dash-card-head">
+            <h2 id="weekTitle">الكميات المستلمة هذا الأسبوع</h2>
+            <span class="dash-muted">بالكيلوغرام</span>
+          </div>
+          <div class="dash-bars">
+            <div class="dash-bar" style="--v: 62%"><span>620</span><i></i><b>السبت</b></div>
+            <div class="dash-bar" style="--v: 48%"><span>480</span><i></i><b>الأحد</b></div>
+            <div class="dash-bar" style="--v: 75%"><span>750</span><i></i><b>الإثنين</b></div>
+            <div class="dash-bar" style="--v: 54%"><span>540</span><i></i><b>الثلاثاء</b></div>
+            <div class="dash-bar today" style="--v: 88%"><span>880</span><i></i><b>الأربعاء</b></div>
+            <div class="dash-bar" style="--v: 30%"><span>300</span><i></i><b>الخميس</b></div>
+            <div class="dash-bar" style="--v: 12%"><span>120</span><i></i><b>الجمعة</b></div>
+          </div>
+        </section>
+
+        <section id="inventory" class="dash-card" aria-labelledby="inventoryTitle">
+          <div class="dash-card-head">
+            <h2 id="inventoryTitle">المخزون الحالي</h2>
+            <span class="dash-muted">السعة 10 أطنان</span>
+          </div>
+          <ul class="dash-stock">
+            <li><p>كرتون وورق <span>3,100 كجم</span></p><div class="dash-progress"><i style="--v: 78%"></i></div></li>
+            <li><p>بلاستيك <span>1,840 كجم</span></p><div class="dash-progress"><i style="--v: 46%"></i></div></li>
+            <li><p>حديد وزهر <span>2,450 كجم</span></p><div class="dash-progress warn"><i style="--v: 92%"></i></div></li>
+            <li><p>ألمنيوم <span>420 كجم</span></p><div class="dash-progress"><i style="--v: 21%"></i></div></li>
+            <li><p>نحاس <span>65 كجم</span></p><div class="dash-progress"><i style="--v: 9%"></i></div></li>
+          </ul>
+          <p class="dash-note">مخزون الحديد قارب الامتلاء، يُنصح بجدولة شحنة إلى المصنع هذا الأسبوع.</p>
+        </section>
+
+        <section id="drivers" class="dash-card" aria-labelledby="driversTitle">
+          <div class="dash-card-head">
+            <h2 id="driversTitle">المندوبون</h2>
+            <span class="dash-muted">4 من 5 متاحون</span>
+          </div>
+          <ul class="dash-drivers">
+            <li><span class="dash-avatar">م</span><div><p>محمد الشمري</p><small>في الطريق إلى حي الياسمين</small></div><span class="dash-dot busy" title="مشغول"></span></li>
+            <li><span class="dash-avatar">ع</span><div><p>علي الغامدي</p><small>في الطريق إلى حي الصحافة</small></div><span class="dash-dot busy" title="مشغول"></span></li>
+            <li><span class="dash-avatar">ت</span><div><p>تركي العنزي</p><small>متاح في المركز</small></div><span class="dash-dot" title="متاح"></span></li>
+            <li><span class="dash-avatar">ي</span><div><p>يوسف البقمي</p><small>متاح في المركز</small></div><span class="dash-dot" title="متاح"></span></li>
+            <li><span class="dash-avatar">س</span><div><p>سعد الحارثي</p><small>إجازة اليوم</small></div><span class="dash-dot off" title="غير متاح"></span></li>
+          </ul>
+        </section>
+
+        <section id="prices" class="dash-card" aria-labelledby="pricesTitle">
+          <div class="dash-card-head">
+            <h2 id="pricesTitle">أسعار الشراء اليوم</h2>
+            <span class="dash-muted">ر.س لكل كجم</span>
+          </div>
+          <form class="dash-prices" id="pricesForm">
+            <label>كرتون <input type="number" step="0.05" min="0" value="0.45" dir="ltr"></label>
+            <label>قوارير PET <input type="number" step="0.05" min="0" value="1.20" dir="ltr"></label>
+            <label>ألمنيوم <input type="number" step="0.05" min="0" value="5.50" dir="ltr"></label>
+            <label>حديد وزهر <input type="number" step="0.05" min="0" value="0.90" dir="ltr"></label>
+            <label>نحاس <input type="number" step="0.05" min="0" value="28.00" dir="ltr"></label>
+            <label>ورق مكتبي <input type="number" step="0.05" min="0" value="0.60" dir="ltr"></label>
+            <button type="submit" class="dash-save">حفظ الأسعار</button>
+          </form>
+        </section>
+      </div>
+      <p class="dash-footer">© 2026 خضرة. لوحة تحكم تجريبية لأغراض العرض فقط، وجميع البيانات وهمية.</p>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
